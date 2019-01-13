@@ -2,9 +2,9 @@ Tasks List
 <ng-container *ngIf="tasksList.length > 0; else noTask">
   <ul>
     <li *ngFor="let task of tasksList">
-      {{task}}
-      <button (click)="delete(task)">Delete</button>
-      <button (click)="done(task)">Done</button>
+      {{task.name}
+      <button type="button" class="btn btn-success" (click)="done(task)">Done</button>
+      <button type="button" class="btn btn-danger" (click)="delete(task)">Delete</button>
     </li>
   </ul>
 </ng-container>

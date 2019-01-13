@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { TodoTaskComponent } from './todo-task/todo-task.component';
 import { DoneTaskComponent } from './done-task/done-task.component';
+import { TasksService } from './services/task.service';
+import { CheckedDirective } from './shared/checked.directive';
 
 
 @NgModule({
@@ -13,14 +15,15 @@ import { DoneTaskComponent } from './done-task/done-task.component';
     AppComponent,
     AddTaskComponent,
     TodoTaskComponent,
-    DoneTaskComponent
+    DoneTaskComponent,
+    CheckedDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [TasksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
