@@ -8,6 +8,9 @@ import { TodoTaskComponent } from './todo-task/todo-task.component';
 import { DoneTaskComponent } from './done-task/done-task.component';
 import { TasksService } from './services/task.service';
 import { CheckedDirective } from './shared/checked.directive';
+import { DateDirective } from './shared/date.directive';
+import { TransformTaskPipe } from './shared/transform-task.pipe';
+import { SortNamePipe } from './shared/sort-name.pipe';
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { CheckedDirective } from './shared/checked.directive';
     AddTaskComponent,
     TodoTaskComponent,
     DoneTaskComponent,
-    CheckedDirective
+    CheckedDirective,
+    DateDirective,
+    TransformTaskPipe,
+    SortNamePipe
   ],
   imports: [
     BrowserModule,
