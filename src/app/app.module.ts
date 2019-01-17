@@ -11,6 +11,8 @@ import { CheckedDirective } from './shared/checked.directive';
 import { DateDirective } from './shared/date.directive';
 import { TransformTaskPipe } from './shared/transform-task.pipe';
 import { SortNamePipe } from './shared/sort-name.pipe';
+import { HttpService } from './services/http.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,9 +29,10 @@ import { SortNamePipe } from './shared/sort-name.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [TasksService],
+  providers: [TasksService, HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
